@@ -1,3 +1,4 @@
+import Icon from '../../components/ui/Icon'
 import type { InventoryItem } from './types'
 import Badge from '../../components/ui/Badge'
 import Button from '../../components/ui/Button'
@@ -35,7 +36,7 @@ export default function InventoryTable({ items, onEdit, onDelete }: InventoryTab
                 <td className="px-4 py-3">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-10 bg-primary-fixed-dim/20 flex items-center justify-center shrink-0">
-                      <span className="material-symbols-outlined text-xl text-primary">{item.icon}</span>
+                      <Icon name={item.icon} size={20} className="text-primary" />
                     </div>
                     <div>
                       <p className="text-body-md text-on-surface font-medium">{item.name}</p>

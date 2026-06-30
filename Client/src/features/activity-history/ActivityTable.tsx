@@ -1,3 +1,4 @@
+import Icon from '../../components/ui/Icon'
 import type { ActivityEntry } from './types'
 
 interface ActivityTableProps {
@@ -30,9 +31,7 @@ export default function ActivityTable({ activities }: ActivityTableProps) {
                     ? 'bg-optimal-bg text-optimal'
                     : 'bg-blue-100 text-blue-700'
                 }`}>
-                  <span className="material-symbols-outlined text-[16px]">
-                    {entry.type === 'donacion' ? 'download' : 'local_shipping'}
-                  </span>
+                  <Icon name={entry.type === 'donacion' ? 'download' : 'local_shipping'} size={16} />
                   {entry.type === 'donacion' ? 'DONACIÓN' : 'DESPACHO'}
                 </div>
               </td>
@@ -49,7 +48,7 @@ export default function ActivityTable({ activities }: ActivityTableProps) {
               </td>
               <td className="px-4 py-3">
                 <div className="flex items-center gap-2">
-                  <span className="material-symbols-outlined text-lg text-on-surface-variant">{entry.originIcon}</span>
+                  <Icon name={entry.originIcon} size={18} className="text-on-surface-variant" />
                   <span className="text-body-md text-on-surface">{entry.originDestination}</span>
                 </div>
               </td>

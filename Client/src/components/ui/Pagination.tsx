@@ -1,3 +1,5 @@
+import Icon from './Icon'
+
 interface PaginationProps {
   currentPage: number
   totalItems: number
@@ -32,7 +34,7 @@ export default function Pagination({ currentPage, totalItems, pageSize, onPageCh
           disabled={currentPage === 1}
           className="p-1.5 rounded-6 hover:bg-secondary-container disabled:opacity-30 disabled:cursor-not-allowed"
         >
-          <span className="material-symbols-outlined text-xl">chevron_left</span>
+          <Icon name="chevron_left" size={20} />
         </button>
         {pages.map((page, i) =>
           typeof page === 'string' ? (
@@ -56,7 +58,7 @@ export default function Pagination({ currentPage, totalItems, pageSize, onPageCh
           disabled={currentPage === totalPages}
           className="p-1.5 rounded-6 hover:bg-secondary-container disabled:opacity-30 disabled:cursor-not-allowed"
         >
-          <span className="material-symbols-outlined text-xl">chevron_right</span>
+          <Icon name="chevron_right" size={20} />
         </button>
       </div>
     </div>

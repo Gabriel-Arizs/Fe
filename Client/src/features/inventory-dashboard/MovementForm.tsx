@@ -2,6 +2,8 @@ import { useState } from 'react'
 import type { MovementData } from './types'
 import Button from '../../components/ui/Button'
 
+import Icon from '../../components/ui/Icon'
+
 interface MovementFormProps {
   products: string[]
   onRegister: (data: MovementData) => void
@@ -36,7 +38,7 @@ export default function MovementForm({ products, onRegister }: MovementFormProps
               : 'bg-secondary-container text-on-surface-variant'
           }`}
         >
-          <span className="material-symbols-outlined text-xl">add_circle</span> Entrar
+          <Icon name="add_circle" size={20} /> Entrar
         </button>
         <button
           type="button"
@@ -47,7 +49,7 @@ export default function MovementForm({ products, onRegister }: MovementFormProps
               : 'bg-secondary-container text-on-surface-variant'
           }`}
         >
-          <span className="material-symbols-outlined text-xl">remove_circle</span> Salir
+          <Icon name="remove_circle" size={20} /> Salir
         </button>
       </div>
 
@@ -73,7 +75,7 @@ export default function MovementForm({ products, onRegister }: MovementFormProps
             onClick={() => setQuantity(Math.max(1, quantity - 1))}
             className="w-10 h-10 rounded-8 bg-secondary-container flex items-center justify-center hover:bg-outline-variant transition-colors"
           >
-            <span className="material-symbols-outlined text-xl">remove</span>
+            <Icon name="remove" size={20} />
           </button>
           <span className="text-numeric-data text-on-surface min-w-[40px] text-center">{quantity}</span>
           <button
@@ -81,7 +83,7 @@ export default function MovementForm({ products, onRegister }: MovementFormProps
             onClick={() => setQuantity(quantity + 1)}
             className="w-10 h-10 rounded-8 bg-secondary-container flex items-center justify-center hover:bg-outline-variant transition-colors"
           >
-            <span className="material-symbols-outlined text-xl">add</span>
+            <Icon name="add" size={20} />
           </button>
         </div>
       </div>

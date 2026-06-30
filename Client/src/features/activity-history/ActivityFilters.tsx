@@ -1,3 +1,4 @@
+import Icon from '../../components/ui/Icon'
 import Button from '../../components/ui/Button'
 
 interface ActivityFiltersProps {
@@ -21,7 +22,7 @@ export default function ActivityFilters({
     <div className="flex flex-col md:flex-row items-start md:items-center gap-4">
       <div className="flex items-center gap-2 flex-wrap">
         <div className="flex items-center gap-2 px-3 py-2 rounded-8 bg-secondary-container">
-          <span className="material-symbols-outlined text-xl text-on-surface-variant">calendar_month</span>
+          <Icon name="calendar_month" size={20} className="text-on-surface-variant" />
           <input
             type="text"
             value={dateRange}

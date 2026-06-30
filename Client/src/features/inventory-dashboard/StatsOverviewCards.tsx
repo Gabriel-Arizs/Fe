@@ -1,3 +1,4 @@
+import Icon from '../../components/ui/Icon'
 import type { DashboardStats } from './types'
 
 interface StatsOverviewCardsProps {
@@ -23,9 +24,7 @@ export default function StatsOverviewCards({ stats }: StatsOverviewCardsProps) {
               <div className={`w-10 h-10 rounded-10 flex items-center justify-center ${
                 card.key === 'lowStock' ? 'bg-critical-bg' : 'bg-primary-fixed-dim/20'
               }`}>
-                <span className={`material-symbols-outlined text-xl ${
-                  card.key === 'lowStock' ? 'text-critical' : 'text-primary'
-                }`}>{card.icon}</span>
+                <Icon name={card.icon} size={20} className={card.key === 'lowStock' ? 'text-critical' : 'text-primary'} />
               </div>
             </div>
             <p className="text-label-sm text-on-surface-variant uppercase tracking-wider">{card.label}</p>

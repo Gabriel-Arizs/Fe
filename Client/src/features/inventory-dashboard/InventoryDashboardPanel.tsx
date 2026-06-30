@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Icon from '../../components/ui/Icon'
 import type { DashboardStats, Supply, MovementData } from './types'
 import StatsOverviewCards from './StatsOverviewCards'
 import SupplyCategories from './SupplyCategories'
@@ -39,7 +40,7 @@ export default function InventoryDashboardPanel({
         <div className="hidden md:flex items-center gap-3">
           <Button variant="ghost" size="md" icon="notifications" />
           <div className="w-10 h-10 rounded-full bg-primary-fixed-dim/30 flex items-center justify-center">
-            <span className="material-symbols-outlined text-xl text-primary">person</span>
+            <Icon name="person" size={20} className="text-primary" />
           </div>
         </div>
       </div>
@@ -108,7 +109,7 @@ export default function InventoryDashboardPanel({
 
       {/* History Link */}
       <div className="flex items-center gap-2 text-primary cursor-pointer hover:underline">
-        <span className="material-symbols-outlined">history</span>
+        <Icon name="history" size={20} />
         <span className="text-label-lg font-semibold">Historial</span>
       </div>
     </div>

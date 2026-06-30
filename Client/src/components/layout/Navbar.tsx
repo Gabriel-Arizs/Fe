@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router'
+import Icon from '../ui/Icon'
 
 const navLinks = [
   { to: '/dashboard', icon: 'grid_view', label: 'Dashboard' },
@@ -28,7 +29,7 @@ export default function Navbar() {
                     }`
                   }
                 >
-                  <span className="material-symbols-outlined text-xl">{link.icon}</span>
+                  <Icon name={link.icon} size={20} />
                   {link.label}
                 </NavLink>
               ))}
@@ -36,10 +37,10 @@ export default function Navbar() {
           </div>
           <div className="flex items-center gap-4">
             <button className="p-2 rounded-8 hover:bg-secondary-container transition-colors">
-              <span className="material-symbols-outlined text-2xl text-on-surface-variant">notifications</span>
+              <Icon name="notifications" size={24} className="text-on-surface-variant" />
             </button>
             <button className="p-2 rounded-8 hover:bg-secondary-container transition-colors">
-              <span className="material-symbols-outlined text-2xl text-on-surface-variant">account_circle</span>
+              <Icon name="account_circle" size={24} className="text-on-surface-variant" />
             </button>
           </div>
         </div>
@@ -58,7 +59,7 @@ export default function Navbar() {
                 }`
               }
             >
-              <span className="material-symbols-outlined text-2xl">{link.icon}</span>
+              <Icon name={link.icon} size={24} />
               <span className="text-[10px] font-semibold leading-tight">{link.label}</span>
             </NavLink>
           ))}

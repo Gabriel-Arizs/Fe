@@ -1,3 +1,4 @@
+import Icon from '../../components/ui/Icon'
 import type { WeeklyStats } from './types'
 
 interface ActivityStatsCardsProps {
@@ -35,11 +36,11 @@ export default function ActivityStatsCards({ stats }: ActivityStatsCardsProps) {
         <div key={card.label} className="bg-surface-bright rounded-12 border border-outline-variant p-5">
           <div className="flex items-start justify-between mb-3">
             <p className="text-label-sm text-on-surface-variant uppercase tracking-wider">{card.label}</p>
-            <span className="material-symbols-outlined text-2xl text-primary">{card.icon}</span>
+            <Icon name={card.icon} size={24} className="text-primary" />
           </div>
           <p className="text-display text-on-surface">{card.value}</p>
           <div className="flex items-center gap-1 mt-2">
-            <span className="material-symbols-outlined text-lg text-optimal">trending_up</span>
+            <Icon name="trending_up" size={18} className="text-optimal" />
             <span className={`text-label-sm font-medium ${card.changeColor}`}>{card.change}</span>
           </div>
         </div>

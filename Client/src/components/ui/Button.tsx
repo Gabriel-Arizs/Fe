@@ -1,3 +1,5 @@
+import Icon from './Icon'
+
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost'
   size?: 'sm' | 'md' | 'lg'
@@ -24,7 +26,7 @@ export default function Button({ variant = 'primary', size = 'md', icon, childre
       className={`inline-flex items-center justify-center gap-2 rounded-8 font-semibold transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed ${variantStyles[variant]} ${sizeStyles[size]} ${className}`}
       {...props}
     >
-      {icon && <span className="material-symbols-outlined text-[20px]">{icon}</span>}
+      {icon && <Icon name={icon} size={20} />}
       {children}
     </button>
   )

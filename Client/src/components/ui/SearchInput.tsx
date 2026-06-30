@@ -1,3 +1,5 @@
+import Icon from './Icon'
+
 interface SearchInputProps {
   value: string
   onChange: (value: string) => void
@@ -7,8 +9,8 @@ interface SearchInputProps {
 export default function SearchInput({ value, onChange, placeholder = 'Buscar...' }: SearchInputProps) {
   return (
     <div className="relative">
-      <span className="absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant material-symbols-outlined text-xl">
-        search
+      <span className="absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">
+        <Icon name="search" size={20} />
       </span>
       <input
         type="text"

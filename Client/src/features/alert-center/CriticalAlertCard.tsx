@@ -1,3 +1,4 @@
+import Icon from '../../components/ui/Icon'
 import type { CriticalAlert } from './types'
 import Button from '../../components/ui/Button'
 
@@ -19,12 +20,12 @@ export default function CriticalAlertCard({ alert, onAction }: CriticalAlertCard
     <div className="bg-surface-bright rounded-12 border border-outline-variant p-4 md:p-5">
       <div className="flex items-start gap-4">
         <div className={`w-12 h-12 rounded-10 flex items-center justify-center shrink-0 ${sev.bg}`}>
-          <span className={`material-symbols-outlined text-2xl ${sev.text}`}>{alert.icon}</span>
+          <Icon name={alert.icon} size={24} className={sev.text} />
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-1">
             <span className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-pill text-label-sm font-semibold ${sev.bg} ${sev.text}`}>
-              <span className="material-symbols-outlined text-[14px]">{sev.icon}</span>
+              <Icon name={sev.icon} size={14} />
               {alert.severity.toUpperCase()}
             </span>
             <span className="text-label-sm text-on-surface-variant">• {alert.location}</span>
@@ -33,9 +34,7 @@ export default function CriticalAlertCard({ alert, onAction }: CriticalAlertCard
           <p className="text-label-sm text-on-surface-variant mt-0.5">{alert.stock}</p>
           {alert.trend && (
             <div className="flex items-center gap-1 mt-1">
-              <span className={`material-symbols-outlined text-lg ${alert.trend === 'down' ? 'text-critical' : 'text-optimal'}`}>
-                trending_{alert.trend}
-              </span>
+              <Icon name={`trending_${alert.trend}`} size={18} className={alert.trend === 'down' ? 'text-critical' : 'text-optimal'} />
               <span className={`text-label-sm font-medium ${alert.trend === 'down' ? 'text-critical' : 'text-optimal'}`}>
                 {alert.trend === 'down' ? 'Decreciendo' : 'Estable'}
               </span>

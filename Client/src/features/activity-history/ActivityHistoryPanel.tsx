@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react'
+import Icon from '../../components/ui/Icon'
 import type { ActivityEntry, WeeklyStats } from './types'
 import ActivityFilters from './ActivityFilters'
 import ActivityTable from './ActivityTable'
@@ -31,7 +32,7 @@ export default function ActivityHistoryPanel({ activities, stats }: ActivityHist
     <div className="space-y-6">
       {/* Header */}
       <div className="flex items-center gap-2">
-        <span className="material-symbols-outlined text-2xl text-primary">LOGISTICS_HQ</span>
+        <Icon name="LOGISTICS_HQ" size={24} className="text-primary" />
         <div>
           <h1 className="text-headline-lg text-on-surface">Historial de Actividad</h1>
           <p className="text-body-md text-on-surface-variant mt-1">
