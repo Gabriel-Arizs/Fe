@@ -1,0 +1,48 @@
+import type { InventoryItem } from "../types/inventory";
+
+export const inventoryItems: InventoryItem[] = [
+  {
+    id: "MED-AX-992",
+    name: "Amoxicilina 500mg",
+    sku: "MED-AX-992",
+    category: "Medicinas",
+    icon: "medical_services",
+    currentStock: 120,
+    maxStock: 1500,
+    expirationDate: "12 Oct 2024",
+    status: "Crítico",
+  },
+  {
+    id: "FOD-RZ-441",
+    name: "Arroz Fortificado",
+    sku: "FOD-RZ-441",
+    category: "Alimentos",
+    icon: "restaurant",
+    currentStock: 4500,
+    maxStock: 5000,
+    expirationDate: "20 Ene 2026",
+    status: "Óptimo",
+  },
+  {
+    id: "WTR-BT-002",
+    name: "Agua Mineral 5L",
+    sku: "WTR-BT-002",
+    category: "Agua",
+    icon: "water_drop",
+    currentStock: 600,
+    maxStock: 2000,
+    expirationDate: null,
+    status: "Bajo",
+  },
+  {
+    id: "TLS-KT-119",
+    name: "Kit de Rescate",
+    sku: "TLS-KT-119",
+    category: "Herramientas",
+    icon: "construction",
+    currentStock: 50,
+    maxStock: 50,
+    expirationDate: null,
+    status: "Óptimo",
+  },
+];
