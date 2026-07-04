@@ -2,8 +2,8 @@ import {
   AlertTriangle, ArrowDown, ArrowUp, BadgeCheck, BedDouble, Bell, Building,
   CalendarDays, ChevronLeft, ChevronRight, Download, Droplets, Edit3, Filter,
   Heart, HeartPulse, History, Home, Hospital, Info, LayoutGrid,
-  Lightbulb, Minus, MinusCircle, Package, Plus, PlusCircle, Search,
-  RefreshCw, Shield, ShoppingCart, Snowflake, Sparkles, Tent, Trash2,
+  Lightbulb, Minus, MinusCircle, MoreVertical, Package, Plus, PlusCircle, Search,
+  RefreshCw, Settings, Shield, ShoppingCart, Snowflake, Sparkles, Tent, Trash2,
   TrendingDown, TrendingUp, Truck, User, UserCircle, Users, Utensils,
   Warehouse, Wifi, Wrench,
   type LucideIcon,
@@ -34,6 +34,7 @@ const iconMap: Record<string, LucideIcon> = {
   trending_up: TrendingUp,
   trending_down: TrendingDown,
   arrow_downward: ArrowDown,
+  arrow_upward: ArrowUp,
   move_up: ArrowUp,
   ac_unit: Snowflake,
   wifi: Wifi,
@@ -57,6 +58,10 @@ const iconMap: Record<string, LucideIcon> = {
   edit: Edit3,
   delete: Trash2,
   add_box: Plus,
+  package_2: Package,
+  emergency_home: AlertTriangle,
+  more_vert: MoreVertical,
+  settings: Settings,
 }
 
 interface IconProps {
